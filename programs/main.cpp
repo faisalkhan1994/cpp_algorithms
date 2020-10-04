@@ -19,6 +19,13 @@ int main(int argc, char* argv[]){
 		cout << "1: " << "Find set bits in a number." << endl;
 		cout << "2: " << "Find number of bits to convert A to B." << endl;
 		cout << "3: " << "Reverse a string." << endl;
+		cout << "4: " << "Is the number even." << endl;
+		cout << "5: " << "Is Palindrome." << endl;
+		cout << "6: " << "Is Paranthesis Balanced." << endl;
+		cout << "7: " << "Byte reverse of an uint32_t integer." << endl;
+		cout << "8: " << "Is Fibonacci." << endl;
+		cout << "9: " << "Compare size of union and struct." << endl;
+		cout << "10: " << "Reverse a sentence" << endl;
 		return 1;
 	}
 
@@ -39,6 +46,57 @@ int main(int argc, char* argv[]){
 		case 3: {
 			cout << "Reverse a string." << endl;
 			string ans = reverseString();
+			cout << "ANS: " << ans << endl;
+			return 0;
+			}
+
+		case 4: {
+			cout << "Is the number even." << endl;
+			string ans = isEven();
+			cout << "ANS: " << ans << endl;
+			return 0;
+			}
+
+		case 5: {
+			cout << "Is Palindrome." << endl;
+			string ans = ispalindrome();
+			cout << "ANS: " << ans << endl;
+			return 0;
+			}
+
+		case 6: {
+			cout << "Is Paranthesis Balanced." << endl;
+			string ans = isBalanced();
+			cout << "ANS: " << ans << endl;
+			return 0;
+			}
+			
+		case 7: {
+			cout << "Byte reverse of an uint32_t integer." << endl;
+			uint32_t ans = reverseBits();
+			cout << "ANS: " << ans << endl;
+			return 0;
+			}
+			
+		case 8: {
+			cout << "Is Fibonacci." << endl;
+			bool ans = isFibonacci();
+			cout << "ANS: " << ans << endl;
+			return 0;
+			}
+			
+		case 9: {
+			cout << "Compare size of union and struct with same(int, char, float) members." << endl;
+			s s1;
+			u u1;
+			cout << "Size of struct: " << sizeof(s1) << endl;
+			cout << "Size of union: " << sizeof(u1) << endl;
+			return 0;
+			}
+			
+		case 10: {
+			cout << "reverse a sentence." << endl;
+			string ans = reverseSentence();
 			cout << "ANS: " << ans << endl;
 			return 0;
 			}

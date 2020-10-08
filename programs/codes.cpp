@@ -158,21 +158,18 @@ bool isFibonacci(){
 }
 
 inline void reversInPlace(string &s, int i, int j){
-	cout << "enter: "<< s << endl;
-	cout << "i: " << i << " j: " << j << endl;
 	while(i < j){
 		swap(s[i], s[j]);
 		i++;
 		j--;
 	}
-	cout << "exit: "<< s << endl;
 }
 
 string reverseSentence(){
 	string s = "";
 	cout << "Enter String." << endl;
 	getline(cin, s);
-	int i = 0, j = 0, len = s.length();
+	int i = 0, j = 0, len = s.length(), k = 0;
 	while(j < len){
 		i = j;
 		while(i < len && s[i] == ' ')
@@ -194,10 +191,50 @@ string reverseSentence(){
 	}
 	
 	reversInPlace(s, 0, len-1);
+	i = 0;
+	while(s[i] == ' '){
+		i++;
+	}
 	
+	while(i < len){
+		s[k] = s[i];
+		k++;
+		i++;	
+	}
+	
+	while(k < len){
+		s[k] = ' ';
+		k++;
+	}
+		
   	return s;
   	
 }
+
+string returnEndian(){
+	int n = 1;
+	if (*(char*)&n)
+		return "Little Endian.";
+		
+	return "Big Endian";
+	
+}
+
+string isPowerOfTwo(){
+	uint32_t num = 0;
+	cout << "Enter number." << endl;
+	cin >> num;
+	if (num <= 0)
+		return "False";
+		
+	if((num & (num-1)) == 0)
+		return "True";
+		
+	return "False";
+
+}
+
+
 
 
 

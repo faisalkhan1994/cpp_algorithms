@@ -32,4 +32,8 @@ bool isFibonacci();
 
 std::string reverseSentence();
 
+std::string returnEndian();
+
+std::string isPowerOfTwo();
+
 #endif /*CODES_H*/

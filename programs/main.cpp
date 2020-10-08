@@ -25,7 +25,9 @@ int main(int argc, char* argv[]){
 		cout << "7: " << "Byte reverse of an uint32_t integer." << endl;
 		cout << "8: " << "Is Fibonacci." << endl;
 		cout << "9: " << "Compare size of union and struct." << endl;
-		cout << "10: " << "Reverse a sentence" << endl;
+		cout << "10: " << "Reverse a sentence." << endl;
+		cout << "11: " << "Return Endiannes." << endl;
+		cout << "12: " << "Check if a number is a power of 2." << endl;
 		return 1;
 	}
 
@@ -97,6 +99,20 @@ int main(int argc, char* argv[]){
 		case 10: {
 			cout << "reverse a sentence." << endl;
 			string ans = reverseSentence();
+			cout << "ANS: " << ans << endl;
+			return 0;
+			}
+			
+		case 11: {
+			cout << "Return Endiannes." << endl;
+			string ans = returnEndian();
+			cout << "ANS: " << ans << endl;
+			return 0;
+			}
+			
+		case 12: {
+			cout << "Check if a number is a power of 2." << endl;
+			string ans = isPowerOfTwo();
 			cout << "ANS: " << ans << endl;
 			return 0;
 			}
